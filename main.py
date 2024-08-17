@@ -9,6 +9,7 @@ for PROXY in proxy_list:
     try:
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--proxy-server=&s' % PROXY)
+        chrome_options.add_argument("--headless")
         URL = 'https://2ip.ru/'
 
         with webdriver.Chrome() as browser:
